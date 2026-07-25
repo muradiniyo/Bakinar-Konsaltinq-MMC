@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakinar Konsaltinq</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bakinar-red': '#E3000F',
+            'bakinar-red-dark': '#cc000e',
+            'bakinar-blue': '#002D62',
+            'bakinar-blue-light': '#003b80',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans antialiased text-slate-600 bg-slate-50">
+  <div class="min-h-screen flex flex-col">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur border-b border-slate-100 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex items-center cursor-pointer" onclick="navigateTo('home')">
+            <img src="https://bakinar.az/wp-content/uploads/2017/07/BK.png" alt="Bakinar Konsaltinq" class="h-12 w-auto object-contain" />
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <button class="nav-item text-slate-600 hover:text-bakinar-blue font-medium transition-colors">Xidmətlər</button>
+            <button class="nav-item text-slate-600 hover:text-bakinar-blue font-medium transition-colors">Haqqımızda</button>
+            <button class="nav-item nav-blogs text-slate-600 hover:text-bakinar-blue font-medium transition-colors">Bloqlar</button>
+            <button class="nav-item bg-bakinar-red text-white px-5 py-2.5 rounded-full hover:bg-bakinar-red-dark hover:scale-105 transition-all font-medium shadow-md shadow-bakinar-red/20">Əlaqə</button>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-slate-600 hover:text-bakinar-blue p-2">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div class="px-4 pt-2 pb-4 space-y-2">
+          <button class="nav-item block w-full text-left px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">Xidmətlər</button>
+          <button class="nav-item block w-full text-left px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">Haqqımızda</button>
+          <button class="nav-item nav-blogs block w-full text-left px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">Bloqlar</button>
+          <button class="nav-item block w-full text-left px-3 py-3 text-bakinar-red font-medium hover:bg-slate-50 rounded-lg">Əlaqə</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-20 flex-grow">
+      <div id="home-page">
+        <section class="relative bg-bakinar-blue text-white overflow-hidden">
+          <div class="swiper heroSwiper w-full h-[600px] lg:h-[700px]">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide relative flex items-center h-full">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop&q=80" alt="Peşəkar Biznes və Texnologiya Konsaltinqi" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 bg-slate-900/70 z-10"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-20 w-full">
+        <div>
+          <span class="inline-block py-1 px-3 rounded-full bg-bakinar-blue-light text-blue-50 text-sm font-semibold tracking-wide mb-6 border border-bakinar-blue-light">Bakı, Azərbaycan</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 leading-tight drop-shadow-md text-white">Peşəkar Biznes və <br/>Texnologiya Konsaltinqi</h1>
+          <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">Sizə rəqabət apardığınız bazarlarda önə çıxmağınızda biznes və texnologiya baxımından əvəzedilməz köməklik edə bilər.</p>
+          <button class="nav-item flex items-center justify-center gap-2 bg-bakinar-red hover:bg-bakinar-red-dark hover:scale-105 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 text-lg shadow-lg hover:shadow-bakinar-red/30 mx-auto" onclick="scrollToSection('contact')">
+            Bizimlə Əlaqə
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide relative flex items-center h-full">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=4200&h=2800&auto=format&fit=crop&q=80" alt="Mühasibat və Vergi Uçotunun Qurulması" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 bg-slate-900/70 z-10"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-20 w-full">
+        <div>
+          <span class="inline-block py-1 px-3 rounded-full bg-bakinar-blue-light text-blue-50 text-sm font-semibold tracking-wide mb-6 border border-bakinar-blue-light">Peşəkar Xidmət</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 leading-tight drop-shadow-md text-white">Mühasibat və Vergi <br/>Uçotunun Qurulması</h1>
+          <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">Biznesinizin maliyyə vəziyyətini tam nəzarətdə saxlayın və riskləri minimuma endirin.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide relative flex items-center h-full">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop&q=80" alt="İnsan Resursları və Hüquqi Dəstək" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 bg-slate-900/70 z-10"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-20 w-full">
+        <div>
+          <span class="inline-block py-1 px-3 rounded-full bg-bakinar-blue-light text-blue-50 text-sm font-semibold tracking-wide mb-6 border border-bakinar-blue-light">Hüquqi Təminat</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 leading-tight drop-shadow-md text-white">İnsan Resursları və <br/>Hüquqi Dəstək</h1>
+          <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">Komandanızı formalaşdırarkən və idarə edərkən bütün hüquqi prosedurların düzgünlüyünə əmin olun.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination !bottom-8 !z-50"></div>
+            <div class="swiper-button-next !text-white after:!text-xl bg-white/10 hover:bg-white/30 w-14 h-14 rounded-full backdrop-blur-md transition-all !z-50 !right-4 md:!right-8 border border-white/20"></div>
+            <div class="swiper-button-prev !text-white after:!text-xl bg-white/10 hover:bg-white/30 w-14 h-14 rounded-full backdrop-blur-md transition-all !z-50 !left-4 md:!left-8 border border-white/20"></div>
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-white relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">Xidmətlərimiz</h2>
+              <p class="text-lg text-slate-600 leading-relaxed">
+                Biznesinizin inkişafı və təhlükəsizliyi üçün ən yüksək standartlara cavab verən peşəkar konsaltinq xidmətləri təklif edirik.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-bakinar-blue/20 group">
+                <div class="w-32 h-32 rounded-2xl bg-white shadow-md flex items-center justify-center text-bakinar-blue mb-8 group-hover:scale-110 group-hover:bg-bakinar-blue group-hover:text-white transition-all duration-300">
+                  <i data-lucide="file-text" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-bakinar-blue transition-colors">Vergi Hesabatları</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  Vergi uçotunun aparılması, hesabatların hazırlanması və dövlət orqanlarına təqdim edilməsi.
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-bakinar-blue/20 group">
+                <div class="w-32 h-32 rounded-2xl bg-white shadow-md flex items-center justify-center text-bakinar-blue mb-8 group-hover:scale-110 group-hover:bg-bakinar-blue group-hover:text-white transition-all duration-300">
+                  <i data-lucide="calculator" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-bakinar-blue transition-colors">Mühasibat Uçotu</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  Mühasibat uçotunun bərpası, gündəlik əməliyyatların rəsmiləşdirilməsi və maliyyə hesabatları.
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-bakinar-blue/20 group">
+                <div class="w-32 h-32 rounded-2xl bg-white shadow-md flex items-center justify-center text-bakinar-blue mb-8 group-hover:scale-110 group-hover:bg-bakinar-blue group-hover:text-white transition-all duration-300">
+                  <i data-lucide="scale" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-bakinar-blue transition-colors">Hüquq Xidmətləri</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  Şirkətlərin qeydiyyatı, müqavilələrin tərtibi və hüquqi məsləhətlərin verilməsi.
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-bakinar-blue/20 group">
+                <div class="w-32 h-32 rounded-2xl bg-white shadow-md flex items-center justify-center text-bakinar-blue mb-8 group-hover:scale-110 group-hover:bg-bakinar-blue group-hover:text-white transition-all duration-300">
+                  <i data-lucide="users" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-bakinar-blue transition-colors">İnsan Resursları</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  Kadrlara dair sənədləşmələrin qanunvericiliyə uyğun aparılması və HR sistemlərinin qurulması.
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-bakinar-blue/20 group">
+                <div class="w-32 h-32 rounded-2xl bg-white shadow-md flex items-center justify-center text-bakinar-blue mb-8 group-hover:scale-110 group-hover:bg-bakinar-blue group-hover:text-white transition-all duration-300">
+                  <i data-lucide="megaphone" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-bakinar-blue transition-colors">Marketinq</h3>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                  Bazar araşdırması, strategiyanın qurulması, rəqəmsal marketinq və brendin inkişafı.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+<section id="about" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">Biz Kimik?</h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+          Bakinar Konsaltinq - fərqli sahələrdə fəaliyyət göstərən biznes subyektlərinə mühasibatlıq, vergi uçotu, hüquq, insan resursları və digər istiqamətlərdə peşəkar dəstək verən konsaltinq şirkətidir.
+        </p>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8">
+          Bizim missiyamız, sahibkarların qanunvericiliyin tələblərinə uyğun, şəffaf və effektiv şəkildə fəaliyyət göstərmələrinə kömək etməkdir. Təcrübəli komandamızla sizin uğurunuz üçün çalışırıq.
+        </p>
+        <div class="grid grid-cols-2 gap-8 mb-8">
+          <div>
+            <div class="text-4xl font-bold text-bakinar-blue mb-2">10+</div>
+            <div class="text-slate-600">İllik Təcrübə</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-bakinar-red mb-2">500+</div>
+            <div class="text-slate-600">Uğurlu Layihə</div>
+          </div>
+        </div>
+        <button class="nav-item flex items-center gap-2 text-bakinar-blue font-semibold hover:text-bakinar-blue-dark transition-colors" onclick="scrollToSection('contact')">
+          Ətraflı Məlumat <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 bg-bakinar-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
+        <div class="relative z-10 w-full h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-bakinar-blue to-bakinar-blue-dark shadow-2xl flex flex-col items-center justify-center p-8 group">
+          <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] [mask-image:radial-gradient(circle_at_center,white,transparent_80%)] group-hover:scale-105 transition-transform duration-1000"></div>
+          <div class="absolute -top-32 -right-32 w-96 h-96 bg-bakinar-red rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+          <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style="animation-delay: 2s;"></div>
+          
+          <div class="relative z-20 flex flex-col items-center space-y-6">
+            <div class="w-24 h-24 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 group-hover:-translate-y-2 transition-transform duration-500">
+              <i data-lucide="handshake" class="w-12 h-12 text-white"></i>
+            </div>
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 tracking-wide">Davamlı İnkişaf</h3>
+              <p class="text-blue-100/90 font-medium tracking-wide">Biznesinizin hər addımında yanınızdayıq</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blogs Section preview -->
+        <section class="py-24 bg-white relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+              <div class="max-w-2xl">
+                <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Son Bloqlar</h2>
+                <p class="text-slate-600">Biznes dünyasından ən son xəbərlər və faydalı məlumatlar.</p>
+              </div>
+              <button onclick="navigateTo('blogs')" class="hidden md:flex items-center gap-2 text-bakinar-blue font-semibold hover:text-bakinar-red transition-colors group">
+                Bütün bloqlar
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+            <div id="latest-blogs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div class="mt-10 text-center md:hidden">
+              <button onclick="navigateTo('blogs')" class="inline-flex items-center gap-2 text-bakinar-blue font-semibold hover:text-bakinar-red transition-colors group">
+                Bütün bloqlar
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 bg-bakinar-blue text-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-center text-white drop-shadow-md">Bizimlə Əlaqə</h2>
+      <p class="text-blue-100/90 text-xl md:text-2xl mb-16 leading-relaxed text-center font-light drop-shadow-sm">
+        Sualınız var? Peşəkar komandamız sizə ən qısa zamanda geri dönüş edəcək.
+      </p>
+      
+      <button onclick="openLink('https://wa.me/994502051028')" class="inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-[#20bd5a] text-white px-10 py-6 md:px-14 md:py-8 rounded-full font-bold transition-all duration-300 text-xl md:text-3xl shadow-[0_0_50px_rgba(37,211,102,0.4)] hover:shadow-[0_0_80px_rgba(37,211,102,0.6)] hover:scale-[1.03] group border border-white/20">
+        <svg class="w-16 h-16 md:w-14 md:h-14 fill-current group-hover:animate-bounce" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        WhatsApp ilə müraciət edin
+      </button>
+    </div>
+  </div>
+</section>
+      </div>
+
+      <!-- Blogs Page -->
+      <div id="blogs-page" class="hidden">
+        <div class="bg-slate-50 min-h-screen">
+          <div class="bg-bakinar-blue text-white py-16 lg:py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div class="max-w-2xl">
+                <div class="flex items-center gap-2 text-blue-200 text-sm mb-4 font-medium">
+                  <button onclick="navigateTo('home')" class="hover:text-white transition-colors">Ana Səhifə</button>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                  <span class="text-white">Bloqlar</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">Faydalı Məlumatlar</h1>
+                <p class="text-lg text-blue-100">Biznes, mühasibat, vergi və insan resursları sahəsində faydalı məlumatlar və xəbərlər.</p>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div id="blogs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Detail Page -->
+      <div id="blog-detail-page" class="hidden">
+        <div class="bg-slate-50 min-h-screen pb-20">
+          <div id="blog-detail-container"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Column 1: About -->
+      <div class="space-y-6">
+        <div class="flex items-center gap-3 cursor-pointer grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300" onclick="navigateTo('home')">
+          <img src="https://bakinar.az/wp-content/uploads/2017/07/BK.png" alt="Bakinar Konsaltinq" class="h-14 w-auto object-contain" />
+        </div>
+        <p class="text-sm leading-relaxed">
+          Peşəkar biznes və texnologiya konsaltinqi xidmətləri. Vergi, mühasibatlıq, hüquq, insan resursları və marketinq sahəsində etibarlı tərəfdaşınız.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <button onclick="openLink('https://www.facebook.com/bakinarkonsaltinq')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="Facebook">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </button>
+          <button onclick="openLink('https://www.instagram.com/bakinar_konsaltinq/')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#E4405F] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </button>
+          <button onclick="openLink('https://www.linkedin.com/company/bakinar-konsaltinq/')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </button>
+          <button onclick="openLink('https://wa.me/994502051028')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="WhatsApp">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </button>
+          <button onclick="openLink('https://x.com/bakinarkonsaltinq')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#000000] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="X (Twitter)">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 1200 1227"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
+          </button>
+          <button onclick="openLink('https://youtube.com/@bakinarkonsaltinq')" class="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center hover:bg-[#FF0000] hover:text-white transition-all duration-300 hover:-translate-y-1" aria-label="YouTube">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-6">Sürətli Keçidlər</h3>
+        <ul class="space-y-4 text-sm font-medium">
+          <li><button class="nav-item hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2" onclick="scrollToSection('services')"><i data-lucide="chevron-right" class="w-4 h-4 text-bakinar-red"></i> Xidmətlər</button></li>
+          <li><button class="nav-item hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2" onclick="scrollToSection('about')"><i data-lucide="chevron-right" class="w-4 h-4 text-bakinar-red"></i> Haqqımızda</button></li>
+          <li><button class="nav-item hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2" onclick="navigateTo('blogs')"><i data-lucide="chevron-right" class="w-4 h-4 text-bakinar-red"></i> Bloqlar</button></li>
+          <li><button class="nav-item hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2" onclick="scrollToSection('contact')"><i data-lucide="chevron-right" class="w-4 h-4 text-bakinar-red"></i> Əlaqə</button></li>
+        </ul>
+      </div>
+      <!-- Column 3: Services -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-6">Xidmətlərimiz</h3>
+        <ul class="space-y-4 text-sm font-medium">
+          <li><span class="hover:text-white transition-colors cursor-pointer">Vergi Hesabatları</span></li>
+          <li><span class="hover:text-white transition-colors cursor-pointer">Mühasibat Uçotu</span></li>
+          <li><span class="hover:text-white transition-colors cursor-pointer">Hüquq Xidmətləri</span></li>
+          <li><span class="hover:text-white transition-colors cursor-pointer">İnsan Resursları</span></li>
+          <li><span class="hover:text-white transition-colors cursor-pointer">Marketinq</span></li>
+        </ul>
+      </div>
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-6">Əlaqə</h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-bakinar-red mt-0.5 flex-shrink-0"></i>
+            <span>Bakinar Konsaltinq, Parking Plaza, 2-ci mərtəbə, Əhməd Rəcəbli küçəsi 1963, Bakı 1052</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-5 h-5 text-bakinar-red flex-shrink-0"></i>
+            <button class="hover:text-white transition-colors" onclick="openLink('tel:+994124658804')">+994 (12) 465-88-04</button>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="message-circle" class="w-5 h-5 text-bakinar-red flex-shrink-0"></i>
+            <button class="hover:text-white transition-colors" onclick="openLink('https://wa.me/994502051028')">+994 (50) 205-10-28</button>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-5 h-5 text-bakinar-red flex-shrink-0"></i>
+            <button class="hover:text-white transition-colors" onclick="openLink('mailto:info@bakinar.com')">info@bakinar.com</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+      <p>&copy; 2024 Bakinar Konsaltinq. Bütün hüquqlar qorunur.</p>
+      <div class="flex items-center gap-4">
+        <button onclick="showLegalModal('privacy')" class="hover:text-white transition-colors cursor-pointer">Məxfilik Siyasəti</button>
+        <span class="w-1 h-1 bg-slate-700 rounded-full"></span>
+        <button onclick="showLegalModal('terms')" class="hover:text-white transition-colors cursor-pointer">İstifadə Şərtləri</button>
+      </div>
+    </div>
+  </div>
+
+<div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+  <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[80vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative text-left">
+    <div class="sticky top-0 bg-white border-b border-slate-100 p-6 flex justify-between items-center z-10 rounded-t-2xl">
+      <h3 id="legal-modal-title" class="text-2xl font-bold text-slate-900"></h3>
+      <button onclick="closeLegalModal()" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 hover:text-slate-900 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div id="legal-modal-content" class="p-8 prose prose-slate max-w-none text-slate-600">
+    </div>
+  </div>
+</div>
+
+</footer>
+
+    </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./blogs_data.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
