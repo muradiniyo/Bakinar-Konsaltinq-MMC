@@ -23,9 +23,9 @@
 
 ## 📌 Layihə Haqqında
 
-[cite_start]Bu layihə **Bakinar Konsaltinq MMC** üçün xüsusi olaraq hazırlanmış rəsmi korporativ veb saytdır. 
+Bu layihə **Bakinar Konsaltinq MMC** üçün xüsusi olaraq hazırlanmış rəsmi korporativ veb saytdır.
 
-[cite_start]Platformanın əsas məqsədi şirkətin təqdim etdiyi **konsaltinq, mühasibat, vergi, hüquq, HR və marketinq** xidmətlərini geniş kütləyə rəqəmsal mühitdə təqdim etmək, eləcə də istifadəçilərə maarifləndirici bloq məqalələri və faydalı resurslar sunmaqdır.
+Platformanın əsas məqsədi şirkətin təqdim etdiyi **konsaltinq, mühasibat, vergi, hüquq, HR və marketinq** xidmətlərini geniş kütləyə rəqəmsal mühitdə təqdim etmək, eləcə də istifadəçilərə maarifləndirici bloq məqalələri və faydalı resurslar sunmaqdır.
 
 ---
 
